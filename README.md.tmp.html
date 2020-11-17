@@ -1,0 +1,91 @@
+<meta charset="UTF-8">
+<h1>How to Make Zero-Touch Deployments a Reality</h1>
+
+<p>Resources for Jamf's November 2020 webinar</p>
+
+<p><img src="zero-touch-provisioning-overview.jpg" alt="" title="" /></p>
+
+<h2>For Enterprise</h2>
+
+<h3>Get started with Apple Business Manager</h3>
+
+<p>Whether your organization has ten devices or ten thousand, Apple fits easily into your existing infrastructure. Zero-touch deployment allows IT to configure and manage remotely, and IT can tailor the setup process to any team. So every Mac, iPad, iPhone, and Apple TV is ready to go from the start.</p>
+
+<p><a href="https://www.apple.com/business/it/">https://www.apple.com/business/it/</a></p>
+
+<h3>Connect Jamf Pro to Apple Business Manager</h3>
+
+<p>Video lesson explaining how to connect your Jamf Pro server to your Apple Business Manager account. Connecting Jamf to Apple is a requirement for Zero-Touch enrollment.</p>
+
+<p><a href="https://trainingcatalog.jamf.com/integrating-with-apple-business-manager">Jamf Training Catalog: Integrating with Apple Business Manager</a></p>
+
+<hr />
+
+<h2>For Education</h2>
+
+<h3>Get started with Apple School Manager</h3>
+
+<p>Whether you’re planning a brand new deployment, or adding Apple devices into your existing infrastructure, iPad and Mac fit right in. And now with Microsoft Azure Active Directory support, it’s easier than ever to provide your students and staff with access to key Apple services for teaching and learning. All the apps and services your teachers and students need every day, like Google Drive and Microsoft Office, are available on iPad. And with the countless creative tools iPad offers, students are empowered to express their learning any way they like.</p>
+
+<p><a href="https://www.apple.com/education/k12/it/">https://www.apple.com/education/k12/it/</a></p>
+
+<h3>Connect Jamf Pro to Apple School Manager</h3>
+
+<p>Video lesson explaining how to connect your Jamf Pro server to your Apple School Manager account. Connecting Jamf to Apple is a requirement for Zero-Touch enrollment.</p>
+
+<p><a href="https://trainingcatalog.jamf.com/integrating-with-apple-school-manager">Jamf Training Catalog: Integrating with Apple School Manager</a></p>
+
+<hr />
+
+<h2>For Everyone</h2>
+
+<p><img src="zero-touch-workflow.jpg" alt="" title="" /></p>
+
+<h3>AppleSeed for IT</h3>
+
+<p>A program where customers can test pre-release software products in order to provide Apple with real-world quality and usability feedback. Every device administrator in an Apple Business Manager or Apple School Manager is eligible to participate. Sign up and sign in with the same Apple ID associated to your Enterprise or Education account.</p>
+
+<p><a href="https://appleseed.apple.com/sp/welcome">Software Customer Seeding</a></p>
+
+<h3>Configuring PreStage Enrollment settings</h3>
+
+<p>Video lesson overview for preparing a PreStage Enrollment for automated device enrollment.</p>
+
+<p><a href="https://trainingcatalog.jamf.com/device-enrollment-program-dep-1">Jamf Training Catalog: Automated Device Enrollment and PreStage Enrollments</a></p>
+
+<h3>Configuring volume purchasing and deployment of Apps &amp; Books</h3>
+
+<p>Video lesson overview for integrating Apple's Apps &amp; Books service with Volume Purchasing in Jamf Pro.</p>
+
+<p><a href="https://trainingcatalog.jamf.com/volume-purchasing">Jamf Training Catalog: Volume Purchasing</a></p>
+
+<h3>Deploy Basic Scripts with Jamf Pro</h3>
+
+<p>Video lesson overview for deploying basic scripts with policies in Jamf Pro.</p>
+
+<p><a href="https://trainingcatalog.jamf.com/deploy-basic-scripts-1">Jamf Training Catalog: Deploy Basic Scripts</a></p>
+
+<h3>About Provisioning.zsh sample script</h3>
+
+<p>This is the same Mac script (iOS devices cannot run scripts) deployed at the end of the video demonstrating a provisioning workflow. Reuse and modify as you like. It includes:</p>
+
+<ul>
+<li>A function for creating a log file at /var/log/Provisioning.log.</li>
+<li>A wait loop that prevents the script from continuing to run until a user has logged in and a Dock appears.</li>
+<li>An example for displaying a dialog to the end user for entering an asset tag number or other piece of information.</li>
+<li>A loop for displaying a JamfHelper full screen window to display progress</li>
+<li>An update inventory command that also populates the Asset Tag field in a device record ( /usr/local/bin/jamf recon -assetTag "$assetTag" ).</li>
+<li>A restart command with a delay of one minute to allow the policy to complete and update the log in Jamf Pro.</li>
+</ul>
+
+<p>To use this script as-is, modify this section near the beginning of the script to include statuses and custom trigger names for the policies you wish to run in the order they should run. Consider installing security software that may scan activity toward the end of the installation.</p>
+
+<blockquote>
+<pre><code># Policy names and policy triggers separated by ","
+
+policyList="Installing Google Chrome,maininstallgooglechrome
+Installing Microsoft Office 2019,maininstallmicrosoftoffice
+Installing Zoom,main-zoom
+Setting Time Zone,settimezonechicago"
+</code></pre>
+</blockquote>
