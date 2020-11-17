@@ -77,7 +77,7 @@ This is the same Mac script (iOS devices cannot run scripts) deployed at the end
 To use this script as-is, modify this section near the beginning of the script to include statuses and custom trigger names for the policies you wish to run in the order they should run. Consider installing security software that may scan activity toward the end of the installation.
 
 >     # Policy names and policy triggers separated by ","
-
+> 
 >     policyList="Installing Google Chrome,maininstallgooglechrome
 >     Installing Microsoft Office 2019,maininstallmicrosoftoffice
 >     Installing Zoom,main-zoom
