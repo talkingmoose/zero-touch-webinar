@@ -82,3 +82,13 @@ To use this script as-is, modify this section near the beginning of the script t
 >     Installing Microsoft Office 2019,maininstallmicrosoftoffice
 >     Installing Zoom,main-zoom
 >     Setting Time Zone,settimezonechicago"
+
+### Provisioning Dialogs
+
+While the end user is waiting for software to download and install and for the Mac to complete provisioning, you can present a full screen window to display useful information about your organization, where to get further help, how to order business cards and request data to help complete the process.
+
+[Octory](https://marketplace.jamf.com/details/octory/) is a highly customizable and elegant macOS application to onboard, support and watch over your users on their Mac. You can easily present a form to the user in the macOS native way, or simply display relevant information while restricting the Mac's controls.
+
+[DEPNotify](https://marketplace.jamf.com/details/depnotify/) is a small light weight notification app that was designed to let your users know what's going on during an automated device enrollment. The app is focused on being very simple to use and easy to deploy. Consider using it with [DEPNotify-Starter for Jamf Pro](https://github.com/jamf/DEPNotify-Starter#readme), a highly customizable script specifically written for use with Jamf Pro.
+
+[JamfHelper](https://hcsonline.com/images/How_to_use_Jamf_Helper.pdf) is a Jamf tool installed at enrollment that displays a basic full screen or modal dialog to your end users. HCS Technology Group has a great set of instructions for how to use it.
